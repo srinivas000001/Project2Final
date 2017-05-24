@@ -1,0 +1,98 @@
+<html>
+<head>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+th, td {
+	border: 5px solid black;
+}
+
+body {
+	background: linear-gradient(orange, lightblue);
+}
+h3 {
+	text-align: left;
+}
+</style>
+
+
+
+</head>
+
+
+
+<body ng-app="">
+
+	<br>
+	<br>
+	<br>
+
+
+
+
+
+	<div ng-controller="EventController as ctrl">
+
+		
+
+
+
+		<div >
+			<h3 class="col-sm-offset-2 col-sm-10">List of Upcoming Events</h3>
+		</div>
+
+
+
+
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-5 col-sm-offset-1 ">
+
+
+
+					<div class="table-responsive">
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th class="text-center" width="200">Event ID</th>
+									<th class="text-center" width="200">Event Name</th>
+									<th class="text-center" width="200">Event Venue</th>
+									<th class="text-center" width="400">Event Description</th>
+								</tr>
+							</thead>
+							<tbody>
+
+								<tr ng-repeat="event in ctrl.events">
+
+									<td class="text-center">{{event.id}}</td>
+									<td class="text-center">{{event.name}}</td>
+									<td class="text-center">{{event.venue}}</td>
+									<td class="text-center">{{event.description}}</td>
+								</tr>
+							</tbody>
+						</table>
+
+					</div>
+
+					<div class="col-sm-5 col-sm-offset-1">
+						<h3>
+							<a class="btn btn-warning" href="#/CreateEvent"
+								style="color: black;">Create New Event</a>
+						</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+</body>
+</html>
+
+
+

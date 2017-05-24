@@ -1,0 +1,94 @@
+<html>
+<head>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+th, td {
+	border: 1px solid;
+}
+body {
+	background: linear-gradient(orange, lightblue);
+}
+
+</style>
+
+
+
+</head>
+
+
+
+<body ng-app="">
+
+
+	<div ng-include src="'c_admin/adminHome.html'"></div> 
+
+
+<br>
+<br>
+<br>
+
+	<div ng-controller="UserController as ctrl">
+
+<div class="col-sm-offset-5 col-sm-10">
+	<h3>Existing User List</h3>
+	</div>
+
+
+
+
+		<div class="container bootstrap snippet">
+			<div class="row">
+				<div class="col-sm-offset-2 col-sm-8">
+
+
+
+					<div class="table-responsive">
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th class="text-center" width="200">UserName</th>
+									<th class="text-center" width="200">Mobile</th>
+									<th class="text-center" width="200">EmailId</th>
+									<th class="text-center" width="200">Role</th>
+									<th class="text-center" width="200">Status</th>
+									<th>&nbsp;</th>
+								</tr>
+							</thead>
+							<tbody>
+
+								<tr ng-repeat="user in ctrl.users">
+
+									<td class="text-center">{{user.username}}</td>
+									<td class="text-center">{{user.mobile}}</td>
+									<td class="text-center">{{user.emailId}}</td>
+									<td class="text-center">{{user.role}}</td>
+									<td class="text-center">{{user.status}}</td>
+									
+					
+
+
+									<td><span ng-hide="user.role=='admin'"><button
+												type="button" ng-click="ctrl.makeAdmin(user.username)"
+												class="btn btn-primary">Make Admin</button></span></td>
+								</tr>
+							</tbody>
+						</table>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+</body>
+</html>
+
+
+

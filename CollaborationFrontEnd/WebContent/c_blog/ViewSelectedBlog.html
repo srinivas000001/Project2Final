@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div ng-controller="BlogController as ctrl">
+<div class="table-responsive">
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th class="text-center" width="200">Blog ID</th>
+									<th class="text-center" width="200">Blog Title</th>
+									<th class="text-center" width="200">Blog Author</th>
+									<th class="text-center" width="400">Blog Description</th>
+								</tr>
+							</thead>
+							<tbody>
+
+								<tr ng-repeat="blog in ctrl.blogs">
+
+									<td class="text-center">{{blog.id}}</td>
+									<td class="text-center">{{blog.title}}</td>
+									<td class="text-center">{{blog.emailid}}</td>
+									<td class="text-center">{{blog.description}}</td>
+
+									<td><button type="button"
+											ng-click="ctrl."
+											class="btn btn-primary">Add Comment</button>
+										</span></td>
+
+								</tr>
+							</tbody>
+						</table>
+
+
+</div>
+</div>
+
+</body>
+</html>

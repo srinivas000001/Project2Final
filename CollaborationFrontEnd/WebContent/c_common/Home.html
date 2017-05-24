@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+h2 {
+	text-align: center;
+	font-family: cursive;
+}
+
+h4 {
+	font-family: cursive;
+	text-align: center;
+}
+
+h3 {
+	text-align: right;
+}
+
+a {
+	color: black;
+}
+
+body {
+	background: linear-gradient(orange, lightblue);
+}
+
+div {
+	word-spacing: 5px;
+}
+</style>
+
+</head>
+<body ng-app="">
+
+
+	<div ng-controller="UserController as ctrl">
+
+		<!-- <div class="nav navbar-nav navbar-right">
+<a href="#" ng-click="ctrl.myprofile()"> My Profile</a>
+</div> -->
+
+		<div class="container">
+			<div ng-show="currentUser.emailId">
+				<div class="nav navbar-nav navbar-right">
+					<h3>
+						Welcome {{currentUser.username}} &nbsp &nbsp<a href="#/userHome"
+							class="btn btn-warning" style="color: black">Home</a> &nbsp&nbsp<a href="/Logout"
+							ng-click="ctrl.logoutUser()" class="btn btn-warning"
+							style="color: black"> Logout</a> &nbsp &nbsp<a href="#/myProfile"
+							class="btn btn-warning" style="color: black">My profile</a>
+					</h3>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div ng-hide="currentUser.emailId">
+				<div class="nav navbar-nav navbar-right"></div>
+				<h3>
+					<a class="btn btn-warning" href="#/login" style="color: black;">Login</a>
+				</h3>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="column">
+		<div class="col-sm-4">
+			<h2 class="bg-danger">Jobs</h2>
+			<img ng-src="resources/Images/job.jpg" height="400" width="420"></img>
+			<h4 class="hidden-md bg-warning">We have more than 200 Job
+				Openings for various positions</h4>
+			<h4 class="hidden-md bg-warning">You can only apply for the
+				jobs, you are a Registered User.</h4>
+		</div>
+
+		<div class="col-sm-4">
+			<h2 class="bg-danger">Blogs</h2>
+			<img ng-src="resources/Images/blog.jpg" height="400" width="420"></img>
+			<h4 class="hidden-md bg-warning">It is free to post a Blog here
+				and you will be able to choose from various topics</h4>
+			<h4 class="hidden-md bg-warning">If you want to post a Blog
+				here, you should be a Registered User</h4>
+		</div>
+
+		<div class="col-sm-4">
+			<h2 class="bg-danger">Alumni</h2>
+			<img ng-src="resources/Images/alumni1.jpg" height="400" width="420"></img>
+			<h4 class="hidden-md bg-warning">You can stay connected with
+				each other through this portal</h4>
+			<h4 class="hidden-md bg-warning">The Alumni members can use this
+				portal to share their real time experiences with students</h4>
+		</div>
+	</div>
+
+
+
+	<div ng-include="'c_common/Footer.html'"></div>
+
+
+
+
+
+</body>
+</html>

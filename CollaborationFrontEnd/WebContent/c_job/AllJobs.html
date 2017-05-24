@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div ng-controller="JobController as ctrl">
+
+		
+
+
+
+		<div >
+			<h3 class="col-sm-offset-2 col-sm-10">List of Open Jobs</h3>
+		</div>
+
+
+
+
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-sm-offset-1 ">
+
+
+
+					<div class="table-responsive">
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th class="text-center" width="200">Job ID</th>
+									<th class="text-center" width="200">Job title</th>
+									<th class="text-center" width="200">Desired Qualification </th>
+									<th class="text-center" width="400">Job Description</th>
+									<th class="text-center" width="400">Apply for Job</th>
+								</tr>
+							</thead>
+							<tbody>
+
+								<tr ng-repeat="job in ctrl.jobs">
+
+									<td class="text-center">{{job.id}}</td>
+									<td class="text-center">{{job.title}}</td>
+									<td class="text-center">{{job.qualification}}</td>
+									<td class="text-center">{{job.description}}</td>
+									
+									<td><button type="button" ng-click="ctrl.applyForJob(jobId)"
+									class="btn btn-primary">Apply for this Job</button></span></td>
+								</tr>
+							</tbody>
+						</table>
+
+					</div>
+
+					<!-- <div class="col-sm-5 col-sm-offset-1">
+						<h3>
+							<a class="btn btn-warning" href="#/CreateEvent"
+								style="color: black;">Create New Event</a>
+						</h3>
+					</div> -->
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<html>
+<head>
+<style>
+th, td {
+	border: 1px solid;
+}
+
+body {
+	background: linear-gradient(orange, lightblue);
+}
+</style>
+
+</head>
+<body>
+
+
+	<span ng-show="IsLoggedIn=='true'"> </span>
+
+	<link rel="stylesheet" type="text/css"
+		href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+
+	<div ng-controller="FriendController as ctrl">
+
+		<div class="container bootstrap snippet">
+			<!--     <div class="row">
+ -->
+			<div class="col-lg-8">
+
+
+				<div ng-controller="UserController as ctrl">
+
+					<div class="col-sm-offset-5 col-sm-10">
+						<h3>Add as a Friend</h3>
+					</div>
+					<div class="table-responsive">
+						<table class="table user-list">
+
+
+							<thead>
+								<tr>
+									<th class="text-center" width="200">UserName</th>
+									<th class="text-center" width="200">Mobile</th>
+									<th class="text-center" width="200">EmailId</th>
+									<th class="text-center" width="200">Action</th>
+
+								</tr>
+							</thead>
+							<tbody>
+
+
+
+								<tr ng-repeat="user in ctrl.users">
+
+									<td class="text-center">{{user.username}}</td>
+									<td class="text-center">{{user.mobile}}</td>
+									<td class="text-center">{{user.emailId}}</td>
+									</div>
+
+
+									<button type="button"
+										ng-click="ctrl.sendFriendRequest(friend.friendEmailId)"
+										class="btn btn-info btn-sm">Send Friend Request</button>
+
+									</td>
+
+									<td><a style="text-decoration: none"></a></td>
+								</tr>
+							</tbody>
+						</table>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

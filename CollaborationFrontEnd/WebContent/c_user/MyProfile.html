@@ -1,0 +1,100 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" 	href="/css/bootstrap.min.css">
+<script	src="/js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<style>
+body {
+	background-color: linear-gradient(orange, lightblue);
+}
+
+h4 {
+	font-family: sans-serif;
+	color: blue;
+}
+
+#myprofile{
+float: left;
+text-align: left;
+}
+</style>
+
+
+</head>
+
+<body ng-controller=mycontroller>
+	<div class="col-md-3 col-md-offset-1 panel panel-default" ng-controller="UserController as ctrl" id="myprofile" style="float: left;">
+		<br> <br>
+		<div class="panel-heading">
+			<h3>My Profile</h3>
+
+		</div>
+
+
+		<!--  <div class="panel-body">
+         		   <img src="Images/{{currentUser.username}}.jpg" class="img-circle" width="150px">
+         
+         </div> -->
+
+		<div class="panel-body">
+
+			<h4>UserName :- {{currentUser.username}}</h4>
+
+		</div>
+
+
+		<div class="panel-body">
+
+			<h4>EmailID :- {{currentUser.emailId}}</h4>
+		</div>
+
+		<div class="panel-body">
+			<h4>Mobile :- {{currentUser.mobile}}</h4>
+		</div>
+
+		<div class="panel-body">
+			<h4>Logged In As :- {{currentUser.role}}</h4>
+		</div>
+
+		<div class="panel-body">
+
+			<div class="btn-group" ng-controller="FriendController as ctrl">
+				<a href="#/viewfriendrequest"><button type="button"
+						class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+						style="color: blue">ViewFriendRequest</button></a>
+			</div>
+		</div>
+
+
+		<div class="panel-body">
+			<div class="btn-group" ng-controller="JobController as ctrl">
+				<a href="#/myappliedjobs"><button type="button"
+						class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+						style="color: blue">MyAppliedJobs</button></a>
+
+			</div>
+		</div>
+
+
+		<div class="panel-body">
+			<div class="btn-group" ng-controller="FriendController as ctrl">
+				<a href="#/updateProfile"><button type="button"
+						class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+						style="color: blue">Update</button></a>
+
+			</div>
+		</div>
+
+		<div class="panel-body">
+			<div class="btn-group">
+				<a href="#/upload"><button type="button"
+						class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+						style="color: blue">ProfilePic</button></a>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

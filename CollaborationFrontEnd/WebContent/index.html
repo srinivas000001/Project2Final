@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- <link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-cookies.min.js"></script>	
+ -->
+ 
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+ 
+
+</head>
+<body ng-app="myApp">
+
+<ng-include src="'c_common/NavBar.html'"></ng-include>
+
+<div ng-view></div>
+
+
+
+	
+	<script src="app.js"></script>
+	<script src="resources/js/angular.js"></script>
+	<script src="resources/js/angular-route.js"></script>
+	<script src="resources/js/angular-cookies.min.js"></script> 
+	<script src="resources/js/angular-messages.js"></script> 
+	<script src="resources/js/angular-resource.js"></script>
+	<script src="resources/js/sockjs.js"></script>
+	<script src="resources/js/stomp.js"></script>  
+	<!-- <script src="resources/js/angular-cookies.js"></script> -->
+
+	<script src="c_user/UserController.js"></script>
+	<script src="c_user/UserServices.js"></script>
+	<script src="c_blog/BlogController.js"></script>
+	<script src="c_blog/BlogServices.js"></script>
+	<script src="c_event/EventController.js"></script>
+	<script src="c_event/EventServices.js"></script>
+	<script src="c_job/JobController.js"></script>
+	<script src="c_job/JobServices.js"></script>
+	<script src="c_job/JobApplicationController.js"></script>
+	<script src="c_job/JobApplicationServices.js"></script>
+	<script src="c_friend/FriendController.js"></script>
+	<script src="c_friend/FriendServices.js"></script>
+	<script src="c_chatForum/ChatForumController.js"></script>
+	<script src="c_chatForum/ChatForumServices.js"></script>
+	
+</body>
+</html>

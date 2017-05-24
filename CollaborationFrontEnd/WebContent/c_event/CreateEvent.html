@@ -1,0 +1,110 @@
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+body {
+	font-family: sans-serif;
+	
+}
+
+form {
+	margin: 25px auto;
+	font-size: medium;
+	padding: 10px 20px;
+	border-radius: 10px;
+	text-align: justify;
+}
+
+body {
+	background: linear-gradient(orange, lightblue);
+}
+
+h2 {
+	text-align: center;
+}
+
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+
+<body ng-app="">
+
+<div class="UserController as ctrl">
+<div class="col-md-9 col-md-offset-3">
+		<h3>Welcome {{currentUser.username}}. You have successfully
+			logged in as {{currentUser.role}}</h3>
+<div class="container">
+		<div class="nav navbar-nav navbar-right">
+			<h3>
+				<a href="#" ng-click="ctrl.logoutUser()" class="btn btn-warning"
+					style="color: black"> Logout</a> &nbsp<a href="#/myProfile"
+					class="btn btn-warning" style="color: black">My profile</a>
+			</h3>
+		</div>
+		</div>
+		</div>
+	
+<div ng-controller="EventController as ctrl">
+	
+<div class="col-sm-9 col-md-offset-5">
+		<h3>Create New Event</h3> 
+		</div>
+
+
+<form name="form" ng-submit="ctrl.submit()" class="form-horizontal" role="form">
+
+<div class="form-group" ng-class="{'has-error' : form.id.$dirty && form.id.$error.required}">
+    <div class="col-sm-offset-2 col-sm-10">
+      <input type="text" class="form-control" placeholder="Event ID" ng-model="ctrl.event.id" id="" name="id" required>
+      <span ng-show="form.id.$dirty && form.id.$error.required" class="help-block">Event ID should be given serially </span>
+    </div>
+  </div>
+
+		<div class="form-group" ng-class="{'has-error' : form.name.$dirty && form.name.$error.required}">
+    <div class="col-sm-offset-2 col-sm-10">
+      <input type="text" class="form-control" placeholder="Event Name" ng-model="ctrl.event.name" id="" name="title" required>
+      <span ng-show="form.name.$dirty && form.name.$error.required" class="help-block">Event Name field cannot be left blank</span>
+    </div>
+  </div>
+  
+  <div class="form-group" ng-class="{'has-error' : form.venue.$dirty && form.venue.$error.required}">
+    <div class="col-sm-offset-2 col-sm-10">
+      <input type="text" class="form-control" placeholder="Event Venue" ng-model="ctrl.event.venue" id="" name="venue" required>
+      <span ng-show="form.venue.$dirty && form.venue.$error.required" class="help-block">Event Venue field cannot be left blank</span>
+    </div>
+  </div>
+  
+   <div class="form-group" ng-class="{'has-error' : form.description.$dirty && form.description.$error.required}">
+    <div class="col-sm-offset-2 col-sm-10">
+      <input type="text" class="form-control" placeholder="Description" ng-model="ctrl.event.description" id="description" name="description" required>
+      <span ng-show="form.description.$dirty && form.description.$error.required" class="help-block">Description field cannot be left blank</span>
+    </div>
+  </div>
+  
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<button type="submit" class="btn btn-default" style="color: #0084c6">Save Event</button>	
+				<button type="submit" class="btn btn-default" ng-click="ctrl.reset()" style="color: #0084c6">Reset</button>	
+		</div>
+		</div>
+	</form>
+	</div>
+
+ 
+ </body>
+ </html>
+
+
+
+

@@ -1,0 +1,100 @@
+<!--  --><html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
+
+<link rel="shortcut icon" href="">
+	
+</head>
+<body>
+
+<head>
+
+
+<style>
+body {
+	font-family: sans-serif;
+	
+}
+
+form {
+	margin: 25px auto;
+	font-size: medium;
+	padding: 10px 20px;
+	border-radius: 10px;
+	text-align: justify;
+}
+
+body {
+	background-color:#FFF7F8;
+}
+
+h2 {
+	text-align: center;
+}
+
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+
+<body ng-app="">
+<div ng-controller="UserController as ctrl">
+	
+<table class="table" style=" background: linear-gradient(orange, lightblue);">
+<tr>
+<td width="60%" valign="top" style="padding-top: 10px">
+<center> <h2 style="color:black;">Collaboration Portal <br><small style="color:black;">It you want to get connected Please Login</small> </h2></center>
+<center><img src="resources/Images/login.jpg" height="500px"></center>
+</td>
+<td width="40%" style="padding-top: 10px">
+<h2 style="color:black;">Login</h2>
+
+<br>
+<br>
+
+<form class="form-horizontal" name="form" ng-submit="ctrl.login()" role="form">
+		<div class="form-group" ng-class="{'has-error' : form.emailId.$dirty && form.emailId.$error.required}">
+    <div class="col-sm-offset-2 col-sm-10">
+      <input type="email" class="form-control" placeholder="EmailId" ng-model="ctrl.user.emailId" id="emailId" name="emailId" required>
+      <span ng-show="form.emailId.$dirty && form.emailId.$error.required" class="help-block">EmailId Is Required</span>
+    </div>
+  </div>
+  
+  <div class="form-group" ng-class="{'has-error' : form.password.$dirty && form.password.$error.required}">
+    <div class="col-sm-offset-2 col-sm-10">
+      <input type="password" class="form-control" placeholder="Password" ng-model="ctrl.user.password" id="password" name="password" required>
+       <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password Is Required</span>
+    </div>
+  </div>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<input type="hidden" name="${_csrf.parameterName}"
+					value="${_csrf.token}">
+				<button type="submit" class="btn btn-default">Login</button>
+			</div>
+		</div>
+
+	
+	</form>
+	</div>
+</td>
+
+
+
+ 
+ </body>
+ </html>
+
+-->
+

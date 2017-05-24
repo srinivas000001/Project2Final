@@ -1,0 +1,75 @@
+<div ng-include src="'c_admin/adminHome.html'"></div> 
+
+<div ng-controller="JobApplicationController as ctrl">
+
+<div class="container bootstrap snippet">
+    <div class="row">
+        <div class="col-lg-12">
+
+                    <div class="table-responsive">
+                        <table class="table user-list">
+                            <thead>
+                                <tr>
+                                <th><span>UserName</span></th>
+                                <th><span>JobId</span></th>
+                                <th class="text-center"><span>Date Applied</span></th>
+                                <th><span>Status</span></th>
+								 <th><span>Remarks</span></th>
+									 <th><span>S->Select,C->Interview,R-Reject</span></th>
+								 
+                                <th>&nbsp;</th>
+                                </tr>
+                            </thead>
+                            <tbody>  
+                            
+                                <tr ng-repeat="jobApplication in ctrl.jobApplications">
+                                   
+ 									<td>{{jobApplication.username}}</td>
+
+                                    <td>{{jobApplication.jobId}}</td>
+                                    
+                                    <td class="text-center">{{jobApplication.date_Applied}}</td>
+                                   
+                                    <td><a href="#" style="text-decoration: none">{{jobApplication.status}}</a> </td>
+                                    
+                                    <td ><a href="#" style="text-decoration: none">{{jobApplication.remarks}}</a> </td>
+                                    
+ 
+ <td>							
+<button type="button" ng-click="showselectme=true" class="btn btn-primary">Select</button>
+<button type="button" ng-click="showrejectme=true" class="btn btn-primary">Reject </button>
+<button type="button" ng-click="showinterview=true" class="btn btn-primary">Call for Interview </button>
+
+<p ng-show="showselectme">
+ <input type="text" class="form-control" placeholder="Reason" ng-model="job.remarks" id="">
+ <button type="button" ng-click="showselectme=false" class="btn btn-primary">Hide </button>
+  <button type="button" class="btn btn-primary" ng-click="ctrl.selectJobApplication(job.username,job.jobId,job.remarks)">Select </button> 
+</p>
+
+<p ng-show="showrejectme">
+ <input type="text" class="form-control" placeholder="Reason" ng-model="job.remarks" id="">
+ <button type="button" ng-click="showrejectme=false" class="btn btn-primary">Hide </button>
+  <button type="button" class="btn btn-primary" ng-click="ctrl.rejectJobApplication(job.username,job.jobId,job.remarks)">Reject </button> 
+</p>
+
+
+<p ng-show="showinterview">
+ <input type="text" class="form-control" placeholder="Reason" ng-model="job.remarks" id="">
+ <button type="button" ng-click="showinterview=false" class="btn btn-primary">Hide </button>
+  <button type="button" class="btn btn-primary" ng-click="ctrl.callForInterview(job.username,job.jobId,job.remarks)">Call For Interview </button> 
+</p>
+
+ </td>
+                                         </tr>
+                            </tbody>
+                        </table>
+                 
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div><!-- 
+</body>
+</html> -->

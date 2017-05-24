@@ -1,0 +1,102 @@
+<html>
+<head>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+th, td {
+	border: 5px solid;
+}
+
+body {
+	background: linear-gradient(orange, lightblue);
+}
+</style>
+
+
+
+</head>
+
+
+
+<body ng-app="">
+
+	<br>
+	<br>
+	<br>
+
+
+
+
+
+	<div ng-controller="BlogController as ctrl">
+
+
+
+
+
+		<div class="col-sm-offset-2 col-sm-10">
+			<h3>List of Blogs</h3>
+		</div>
+
+
+
+
+		<div class="container bootstrap snippet">
+			<div class="row">
+				<div class="col-sm-5 col-sm-offset-1 ">
+
+
+
+					<div class="table-responsive">
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th class="text-center" width="200">Blog ID</th>
+									<th class="text-center" width="200">Blog Title</th>
+									<th class="text-center" width="200">Blog Author</th>
+									<th class="text-center" width="400">Blog Description</th>
+									
+								</tr>
+							</thead>
+							<tbody>
+
+								<tr ng-repeat="blog in ctrl.blogs">
+
+									<td class="text-center">{{blog.id}}</td>
+									<td class="text-center">{{blog.title}}</td>
+									<td class="text-center">{{blog.emailid}}</td>
+									<td class="text-center">{{blog.description}}</td>
+
+									<!-- <td><button type="button"
+											ng-click="ctrl.blogById(blog.id)"
+											class="btn btn-primary">Select Blog</button>
+										</span></td>
+ -->
+								</tr>
+							</tbody>
+						</table>
+
+					</div>
+
+					<div class="col-sm-5 col-sm-offset-1">
+						<h3>
+							<a class="btn btn-warning" href="#/CreateBlog"
+								style="color: black;">Create New Blog</a>
+						</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+</body>
+</html>
+
+
+
